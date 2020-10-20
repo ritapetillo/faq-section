@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap");
+
+/*-------------VARIABLES----------------*/
+:root {
+  --font: "Kumbh Sans", sans-serif;
+  --very-dark-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  --gradient-violet: hsl(273, 75%, 66%);
+  --gradient-blue: hsl(240, 73%, 65%);
+  --text-color-gray-very-dark: hsl(237, 12%, 33%);
+  --text-color-gray-just-dark: hsl(240, 6%, 50%);
+  --dividers-color: hsl(240, 5%, 91%);
+}
+
+/*-------------SETTINGS----------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+  font-size: 12px;
+  font-weight: 100;
+  background: var(--gradient-violet);
+  background: linear-gradient(
+    190deg,
+    var(--gradient-violet) 0%,
+    var(--gradient-blue) 100%
+  );
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color-gray-just-dark);
+}
+/*-------------CONTAINER----------------*/
+.container {
+  background-color: white;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 25px;
+  border-radius: 25px;
+  position: relative;
+  min-width: 340px;
+  max-width: 1200px;
+  max-height: 700px;
+}
+.container__row {
+  border-bottom: 1px solid var(--dividers-color);
+  padding: 20px 2px;
+}
+.container__row h4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.disabled {
+  font-weight: 400;
+}
+.hidden {
+  display: none;
+}
+.container__img {
+  position: absolute;
+  transform: translateX(-50%);
+
+  top: -20%;
+  left: 50%;
+}
+.container__img img:last-child {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+}
+h1 {
+  text-align: center;
+  margin-top: 120px;
+  font-size: 40px;
+  color: var(--text-color-gray-very-dark);
+  margin-bottom: 40px;
+}
+h4 {
+  margin-bottom: 20px;
+}
+p {
+  padding-right: 60px;
+}
+.active {
+  transform: rotate(180deg);
+}
+
+@media screen and (min-width: 800px) {
+  .container {
+    flex-direction: row;
+    padding: 2% 5%;
+                background-image: url(./images/bg-pattern-desktop.svg);
+                background-position: -31%;
+                background-repeat: no-repeat;
+                background-size: 60%;
+
+  }
+  .container > div:last-child{
+      flex:1;
+      margin-left:50px;
+  }
+  .container__img {
+    position: static;
+      transform: translateX(0%);
+      width: 50%;
+            
+
+      
+  }
+  .container__img img:last-child {
+  position:relative;
+  top: -30%;
+  right: 43%;
+  width:130%;
+  display: none;
+}
+.container__img img:first-child {
+  width:130%;
+  position:relative;
+  top: 18%;
+  right: 50%;
+}
+}
